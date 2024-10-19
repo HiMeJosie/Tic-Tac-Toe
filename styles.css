@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#score {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#difficulty {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s, border 0.3s;
+    cursor: pointer;
+}
+
+#difficulty:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    border: 1px solid #fff;
+}
+
+#difficulty:focus {
+    outline: none;
+    border: 2px solid #fff;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    font-size: 2.5em;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.bounce {
+    animation: bounce 0.3s;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+span {
+    transition: opacity 0.5s;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #f2f2f2;
+    transform: scale(1.05);
+}
